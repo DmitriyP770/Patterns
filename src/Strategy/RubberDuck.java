@@ -1,9 +1,9 @@
 package Strategy;
 
 public class RubberDuck extends Duck{
-    @Override
-    void fly() {
-
+    public RubberDuck() {
+        flyable = new NoFlying();
+        quackable = new PickQuack();
     }
 
     @Override
@@ -11,8 +11,5 @@ public class RubberDuck extends Duck{
         System.out.println("Rubber Duck picture");
     }
 
-    @Override
-    void quack() {
-        System.out.println("pick-pick");
-    }
+
 }

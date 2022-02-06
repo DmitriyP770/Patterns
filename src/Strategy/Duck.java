@@ -1,14 +1,20 @@
 package Strategy;
-
+// Реализация поведения флай и квак в отдельных классах, а не в классе Дак
 public abstract class Duck {
-    void quack(){
-        System.out.println("quack-quack");
+    Flyable flyable ;
+    Quackable quackable;
+
+    public Duck() {
     }
-    void fly(){
-        System.out.println("flying");
-    }
+
     abstract void display();
-    void swim(){
+    public void swim(){
         System.out.println("Duck is swimming");
+    }
+    public void performFly(){
+        flyable.fly();
+    }
+    public void performQuack(){
+        quackable.quack();
     }
 }
