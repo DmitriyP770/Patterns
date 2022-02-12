@@ -1,6 +1,6 @@
 package Factory;
 
-public class Pizza {
+public abstract class Pizza {
     String type;
 
 
@@ -17,20 +17,6 @@ public class Pizza {
         System.out.println("boxing pizza");
     }
 
-    Pizza orderPizza(String type){
-        Pizza pizza ;
-        if (type.equals("Clam")){
-            pizza = new ClamPizza();
-        } else if (type.equals("Pepperoni")){
-            pizza = new PepperoniPizza();
-        } else {
-            pizza = new CheesePizza();
-        }
-        pizza.prepare();
-        pizza.bake();
-        pizza.cut();
-        pizza.box();
-        return pizza;
-    }
+
 
 }

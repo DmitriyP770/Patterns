@@ -2,8 +2,8 @@ package Factory;
 
 public class Main {
     public static void main(String[] args) {
-        Pizza pizza = new Pizza();
-        pizza.orderPizza("Clam");
+        PizzaStore store = new PizzaStore(new SimplePizzaFactory());
+        store.orderPizza("Pepperoni");
 
 
     }
